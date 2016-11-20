@@ -1,0 +1,37 @@
+fileTypes: [
+  "dot"
+]
+foldingStartMarker: '''
+  (?x)
+          (<(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)\\b.*?>
+          |<!--(?!.*-->)
+          |\\{\\s*($|\\?>\\s*$|//|/\\*(.*\\*/\\s*$|(?!.*?\\*/)))
+          )
+'''
+foldingStopMarker: '''
+  (?x)
+          (</(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)>
+          |^\\s*-->
+          |(^|\\s)\\}
+          )
+'''
+name: "HTML (doT)"
+patterns: [
+  {
+    begin: "\\{\\{[\\^\\=\\?~]*[^\\#]"
+    end: "\\}\\}"
+    name: "source.js.embedded.html"
+    patterns: [
+      {
+        include: "source.js"
+      }
+    ]
+  }
+  {
+    include: "text.html"
+  }
+  {
+    include: "text.html.basic"
+  }
+]
+scopeName: "text.html.dotjs"
