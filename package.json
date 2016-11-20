@@ -1,6 +1,6 @@
 {
   "name": "language-dot-js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Syntax highlighter for doT.js",
   "keywords": [],
   "repository": "https://github.com/Aldlevine/language-dot-js",
